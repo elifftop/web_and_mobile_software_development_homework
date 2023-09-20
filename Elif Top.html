@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Elif Top Proje</title> <!-- Burada sayfanın başlığını belirledim -->
+	<!-- Style ile kullandığım CSS stillerini belirledim -->
+    <!-- Öncelikle sağ üst köşedeki giriş ve kayıt ol butonlarının stillerini belirledim -->
+    <!-- Nav ile menü çubuğunun stillerini belirledim -->
+    <!-- Ardından menü öğelerinin stillerini belirledim -->
+    <!-- Body ile sayfa arka planının rengini ve yazının fontunu belirledim -->
+    <!-- h1 ile başlık rengini belirledim -->
+    <!-- Datetime ile tarih ve saat görüntüsünün stillerini belirledim -->
+    <style> 
+    
+		.header-right { 
+			float: right;
+		}
+
+
+		.header-right a {
+			color: #333;
+			text-decoration: none;
+			margin-left: 10px;
+		}
+
+		.header-right a:hover {
+			color: #333;
+		}
+
+		nav { 
+			background-color: #7F7FD5;
+			color: #333;
+			overflow: hidden;
+            border-radius: 10px;
+		}
+
+		.nav-item { 
+			float: left;
+			width: 25%;
+            box-shadow: 2px 2px 2px #888888;
+		}
+
+		.nav-item a {
+			display: block;
+			color: #333;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+            border-radius: 10px;
+            text-shadow: 1px 1px 1px #fff;
+		}
+
+		.nav-item a:hover {
+			background-color: #ddd;
+			color: #333;
+            border-radius: 10px;
+		}
+    
+    	 body { 
+        background-color: lavender;
+        font-family: Arial, sans-serif;
+    }
+
+ 
+    
+    h1 { 
+  		color: #666;
+	}	
+    #datetime { 
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: #7F7FD5;
+        color: #333;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px 0 0 0;
+        box-shadow: 2px 2px 2px #888888;
+    }
+
+	</style>
+	
+</head>
+<body>
+	<header>
+		<div class="header-right">
+			<a href="#">Giriş</a>
+			<a href="#">Kayıt Ol</a>
+		</div>
+		<h1>Web Ve Mobil Yazılım Geliştirme Dersi Proje Ödevi</h1>
+		<nav>
+			<div class="nav-item"><a href="#">Anasayfa</a></div>
+			<div class="nav-item"><a href="https://www.softito.com.tr/">Eğitimler</a></div> <!-- Eğitimler kısmına tıklandığında açılacak linki gömdüm -->
+			<div class="nav-item"><a href="İletişim.html">İletişim</a></div> <!-- Ayrı bir html dosyası oluşturup iletişim kısmına tıklandığında başka bir sayfaya yönlendirme sağladım -->
+			<div class="nav-item"><a href="#">Biz Kimiz</a></div>
+		</nav>
+	</header>
+	<main>
+		
+	</main>
+	<footer>
+		<div id="datetime"></div>
+	</footer>
+</body>
+<!-- Tarih ve saati almak için JavaScript kodu kullandım -->
+<script> 
+	function updateTime() {
+		const now = new Date();
+		const date = now.toDateString();
+		const time = now.toLocaleTimeString();
+		document.getElementById("datetime").innerHTML = date + " " + time;
+	}
+	setInterval(updateTime, 1000);
+</script>
+</html>
